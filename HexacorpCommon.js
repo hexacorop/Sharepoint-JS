@@ -2,6 +2,13 @@
    var selectedperform = $("select[title='columnname']").find("option:selected").text();
 
 
+//set people picker values
+var _PeoplePicker = $("div[title='Currentuser']");
+var _PeoplePickerTopId = _PeoplePicker.attr('id');
+$("#"+_PeoplePickerTopId).text(getdata);
+$('a[title="Check Names"]').click();
+
+
 
 //Get PeoplPicker values
 
