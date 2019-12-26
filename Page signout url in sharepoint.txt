@@ -1,0 +1,7 @@
+  /_layouts/closeConnection.aspx?loginasanotheruser=true
+
+example : site url + /_layouts/closeConnection.aspx?loginasanotheruser=true
+
+
+How to log in to SharePoint as a different user?
+https://[site or web address]/_layouts/closeConnection.aspx
