@@ -3,9 +3,9 @@
 
 
 //set people picker values
-var _PeoplePicker = $("div[title='Currentuser']");
-var _PeoplePickerTopId = _PeoplePicker.attr('id');
-$("#"+_PeoplePickerTopId).text(getdata);
+
+ var _PeoplePicker = $("div[title='columnname']");
+  var _PeoplePickerTopId = _PeoplePicker.text(getdata);
 $('a[title="Check Names"]').click();
 
 
