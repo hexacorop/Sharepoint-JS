@@ -1,0 +1,105 @@
+(Remember for SharePoint 2013, 2016 you might want to add "15", "16" respectively after "/_layouts/" but if you don't SharePoint will take care of that for you) .. Also some of these are turned off on Office 365 SharePoint online.
+ 
+Site collection level recycle bin:
+/_layouts/15/AdminRecycleBin.aspx
+ 
+Site level recycle bin (Added by Steve Stewart):
+/_layouts/RecycleBin.aspx
+ 
+Recreate default site sp groups (Added by Neal Bongers):
+_layouts/15/permsetup.aspx
+ 
+Load document tab initial (Added by Dominik Gempeler)
+?InitialTabId=Ribbon.Document
+ 
+Delete user from Site collection (on-premises) (Added by SamDavid):
+/_layouts/15/people.aspx?MembershipGroupId=0
+ 
+Display list in grid view. 'True' is case sensitive (Added by Antoine L.):
+?ShowInGrid=True
+ 
+Quick Launch settings page (Added by Ishani M.):
+/_layouts/quiklnch.aspx
+ 
+Navigation Settings page (Added by Abdur Raheem):
+/_layouts/15/AreaNavigationSettings.aspx
+ 
+Sandboxed Solution Gallery:
+/_catalogs/solutions/Forms/AllItems.aspx
+ 
+Workflow history hidden list:
+/lists/Workflow History
+ 
+Filter toolbar for Lists and libraries (Added by Asimaili):
+?Filter=1
+Site usage page (Added by @Dnyag):
+/_layouts/usage.aspx
+ 
+Site content and structure  page (Added by @Dnyag):
+/_layouts/sitemanager.aspx
+ 
+Site settings page (Added by Aowworld):
+/_layouts/settings.aspx
+ 
+View all site content page (Site content) (Added by Aowworld):
+/_layouts/viewlsts.aspx
+ 
+Manage site collection features - CASE SENSITIVE -  (Added by Vardhaman):
+/_layouts/ManageFeatures.aspx?Scope=Site
+ 
+Manage site features (Added by Vardhaman):
+/_layouts/ManageFeatures.aspx
+ 
+ Get the version of the SharePoint server (Patch level) (Added by: John Liu):
+ /_vti_pvt/Service.cnf
+ 
+Web Part Maintenance Page (Added by: Ricky):
+?Contents=1
+ 
+Show Page in Dialog View (Added by:Ricky):
+?isdlg=1
+ 
+Application page for registering SharePoint apps
+/_layouts/15/appregnew.aspx
+ 
+Save Site as a template
+/_layouts/savetmpl.aspx
+ 
+Sign in as a different user
+/_layouts/closeConnection.aspx?loginasanotheruser=true
+ 
+Enable SharePoint designer
+/_layouts/SharePointDesignerSettings.aspx
+ 
+Welcome Page (Default page settings)
+/_layouts/AreaWelcomePage.aspx
+ 
+Change Site Master Page
+/_layouts/ChangeSiteMasterPage.aspx
+ 
+Page Layouts and Site Templates
+/_Layouts/AreaTemplateSettings.aspx
+ 
+Master Pages library
+/_catalogs/masterpage/Forms/AllItems.aspx
+ 
+Quick Deploy List
+Quick%20Deploy%20Items/AllItems.aspx
+ 
+Open Page in Edit Mode
+?ToolPaneView=2
+ 
+Taxonomy Hidden List (MMS)
+Lists/TaxonomyHiddenList/AllItems.aspx
+ 
+User Information List:
+ _catalogs/users
+_catalogs/users/simple.aspx
+ 
+Force displaying the user profile in the site
+collection:
+/_layouts/userdisp.aspx?id={UserID}&Force=True
+ 
+Site hierarchy page (lists of sub sites) - (Added by community contributions)
+/_layouts/vsubwebs.aspx
+/_layouts/1033/vsubwebs.aspx
