@@ -1,0 +1,51 @@
+#PowerShell script to update User Email address for all Sites in the web application:
+#Use this script to update user's Email address for the entire web application.
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
+  
+$WebAppURL="http://intranet.crescent.com"
+$UserAccount="i:0#.w|hts\svikram"
+ 
+#Update Email for all sites in the web application
+Get-SPWebApplication $WebAppURL | Get-SPSite -Limit All | Foreach-object {
+     
+    Write-host "Processing:" $_.Rootweb.URL
+ 
+    #Get the User's Current Display Name and E-mail
+    $User = Get-SPUser -Identity $UserAccount -Web $_.Rootweb.URL
+ 
+    if($User -ne $null)
+    {
+        Set-SPUser -Identity "i:0#.w|Crescent\Salaudeen" -Email "Salaudeen@test.com" –Web $_.Rootweb.URL
+    }
+}
+#To Sync All user details such as Email, Display name, etc from Active directory, use:
+
+Get-SPUser -Web http://web-app-url | Set-SPUser –SyncFromAD
+
+
+
+
+#You can get the user's Email address with this PowerShell one-liner:
+
+(Get-SPUser -Identity "Crescent\bourgeois" -Web "http://portal.crescent.com/projectpipeline").email
+
+#Solution is simple! SharePoint user has no email address, so add email address to users to resolve the issue!
+
+#How to update SharePoint user email address?
+#To update user email address, Use, Set-SPUser cmdlet. Here are some examples:
+
+#Syntax:
+
+Set-SPUser -Identity "i:0#.w|Domain\username" -Email "email@domain.com" -Web http://sharepoint-site-url
+#Example:
+
+Set-SPUser -Identity "i:0#.w|Crescent\Salaudeen" -Email "Salaudeen@test.com" -Web http://intranet.test.com/
+#This sets the Email ID of the user to given Email for entire site collection.
+
+
+
+
+
+
+
