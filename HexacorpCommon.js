@@ -1,3 +1,9 @@
+//Get query string value using jquery
+
+	JSRequest.EnsureSetup();
+	var itemId = JSRequest.QueryString["ID"];
+
+
 //Selecte Drop Down values
    var selectedperform = $("select[title='columnname']").find("option:selected").text();
 
